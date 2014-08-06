@@ -27,13 +27,7 @@
   	 	</div>
 
     	<div id='my-canvas' class='canvas col-sm-9'>
-    		Canvas
-    		<canvas id="simple_sketch" width="800" height="300"></canvas>
-    		<script type="text/javascript">
-				$(function() {
-					$('#simple_sketch').sketch();
-				});
-			</script>
+        {{> drawingSurface}}
     	</div>
   </div>
   <div class='input-bar row'>
@@ -50,8 +44,12 @@
 
 </body>
 
-<template name="hello">
-  <h1>Hello World!</h1>
-  {{greeting}}
-  <input type="button" value="Click" />
+<template name="drawingSurface">
+  <h2>Loading...</h2>
+  {{> canvas}}
+  <input class='clearButton' type='button' value='Clear'/>
+</template>
+
+<template name="canvas">
+  <div id='canvas'></div>
 </template>
