@@ -1,4 +1,22 @@
 /* CSS declarations go here */
-.userKey{
-	background-color: blue;
+.word, .timer{
+	height: 40px;
+	border: 2px solid black;
+}
+
+.HUD, .canvas{
+	height: 500px;
+}
+
+.HUD {
+	border: 2px solid black;
+}
+
+.canvas{
+	border: 2px solid lightblue;
+}
+
+.input-bar {
+	height: 40px;
+	border: 2px solid black;
 }

@@ -3,23 +3,43 @@
 	<meta charset="utf-8">
   <title>Draw-it</title>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="Draw-it.css">
+  <link rel="stylesheet" type="text/css" href="draw-it.css">
+  <!-- // <script type='text/javascript' src='sketch.js'></script> -->
 </head>
 
 <body>
-  {{> hello}}
+  <!-- {{> hello}} -->
 
 
 <div class="container">
-
 	<div class="row">
-    	<div class='userKey col-sm-4'>
-    	User Key
+		<div class="word col-sm-5">
+			The word
+		</div>
+		<div class="timer col-sm-7">
+			countDown
+		</div>
+	</div>
+
+	<div class="main row">
+    	<div class='HUD col-sm-3'>
+    		HUD
   	 	</div>
 
-    	<div class='col-sm-8'>
-    		
+    	<div id='my-canvas' class='canvas col-sm-9'>
+    		Canvas
+    		<canvas id="simple_sketch" width="800" height="300"></canvas>
+    		<script type="text/javascript">
+				$(function() {
+					$('#simple_sketch').sketch();
+				});
+			</script>
     	</div>
+  </div>
+  <div class='input-bar row'>
+  	<div class="col-sm-12">
+  		input-bar
+  	</div>
   </div>
 
 </div>
