@@ -5,6 +5,7 @@
   <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
   <link rel="stylesheet" type="text/css" href="draw-it.css">
   <!-- // <script type='text/javascript' src='sketch.js'></script> -->
+
 </head>
 
 <body>
@@ -12,12 +13,12 @@
 
 
 <div class="container">
-  <div class="row">
+  <div class="row row1">
     <div class="login">   
       {{> loginButtons}}
     </div>
   </div>
-	<div class="row">
+	<div class="row row2">
 		<div class="word col-sm-5">
 			The word
 		</div>
@@ -26,13 +27,15 @@
 		</div>
 	</div>
 
-	<div class="main row">
+	<div class="row main">
     	<div class='HUD col-sm-3'>
     		HUD
+       <input class='cheatButton btn btn-danger btn-lg btn-block' type='button' value='Cheat!'/> 
   	 	</div>
 
     	<div id='my-canvas' class='canvas col-sm-9'>
         {{> drawingSurface}}
+         <input class='clearButton1 btn btn-primary btn-md' type='button' value='Clear'/>
     	</div>
   </div>
   <div class='input-bar row'>
@@ -40,8 +43,10 @@
   		input-bar
   	</div>
   </div>
-
 </div>
+
+
+
 
 
 
@@ -52,9 +57,16 @@
 <template name="drawingSurface">
   <h2>Loading...</h2>
   {{> canvas}}
-  <input class='clearButton' type='button' value='Clear'/>
+  
+ 
 </template>
 
 <template name="canvas">
   <div id='canvas'></div>
 </template>
+
+
+
+
+
+

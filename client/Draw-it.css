@@ -1,25 +1,63 @@
-.login li{
+html, body {
+	height: 100%;
+}
+
+.container{
+	height: 100%;
+}
+/**/
+.row1{
+height: 5%;
+}
+
+.login, li{
+	height: 100%;
 	list-style-type: none;
 }
 
 .word, .timer{
-	height: 40px;
+	height: 100%;
 	border: 2px solid black;
+	/*background-color: blue;*/
+}
+.row2 {
+	height: 15%;
 }
 
-.HUD, .canvas{
-	height: 500px;
-}
-
-.HUD {
+.HUD, .canvas, #my-canvas{
+	height: 100%;
 	border: 2px solid black;
+	float: left;
 }
+#my-canvas{
+	padding:0;
+/*	position: relative;
+*/}
 
-.canvas{
-	border: 2px solid lightblue;
+.main{
+ height: 440px;
 }
 
 .input-bar {
-	height: 40px;
+	height: 15%;
 	border: 2px solid black;
 }
+.clearButton1{
+	display: inline;
+	position: absolute;
+	float: right;
+	margin-top: -6%;
+	margin-left: 92%;
+}
+.cheatButton{
+	position: absolute;
+	float: right;
+	margin-top: 126%;
+	margin-left: -5%;
+	/*position: fixed;*/
+	/*margin-right: 38%;*/
+
+}
+/*.main-row{
+
+}*/
