@@ -56,3 +56,9 @@ Template.canvas.events({
     }
   }
 });
+
+var countDown = function(){
+  
+}
+
+

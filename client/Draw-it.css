@@ -31,11 +31,11 @@ height: 5%;
 }
 #my-canvas{
 	padding:0;
-	position: relative;
-}
+/*	position: relative;
+*/}
 
 .main{
- height: 62%;
+ height: 440px;
 }
 
 .input-bar {
@@ -44,15 +44,17 @@ height: 5%;
 }
 .clearButton1{
 	display: inline;
-	position: relative;
+	position: absolute;
 	float: right;
-	margin-top: -4%;
-	margin-right: 2%;
+	margin-top: -6%;
+	margin-left: 92%;
 }
-.clearButton2{
-	position: relative;
+.cheatButton{
+	position: absolute;
 	float: right;
-	margin-top: 143%;
+	margin-top: 126%;
+	margin-left: -5%;
+	/*position: fixed;*/
 	/*margin-right: 38%;*/
 
 }
