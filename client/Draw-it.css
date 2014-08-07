@@ -1,4 +1,7 @@
-/* CSS declarations go here */
+.login li{
+	list-style-type: none;
+}
+
 .word, .timer{
 	height: 40px;
 	border: 2px solid black;

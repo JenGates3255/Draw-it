@@ -1,3 +1,7 @@
+Accounts.ui.config({
+   passwordSignupFields: 'USERNAME_AND_EMAIL'
+});
+
 points = new Meteor.Collection('pointsCollection');
 var canvas;
 
