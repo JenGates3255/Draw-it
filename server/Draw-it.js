@@ -1,3 +1,5 @@
+var randomWord = Meteor.require('random-words');
+
 points = new Meteor.Collection('pointsCollection');
 
 Meteor.publish('pointsSubscription', function () {
@@ -7,5 +9,8 @@ Meteor.publish('pointsSubscription', function () {
 Meteor.methods({
   'clear': function () {
     points.remove({});
+  },
+  'getWord': function(callback) {
+  	return randomWord()
   }
 });

@@ -5,6 +5,26 @@ Accounts.ui.config({
 points = new Meteor.Collection('pointsCollection');
 var canvas;
 
+var currentWord = ''
+var changeWord = function() {
+  Meteor.call('getWord', function(err, word) {
+    currentWord = word
+    console.log(currentWord)
+  })  
+}
+// When turn changes call the above function with changeWord()
+
+// Use session.set to make something reactive
+// session.get to retrieve value
+
+
+
+
+
+
+
+// Canvas code below
+// =========================================================s
 Deps.autorun( function () {
   Meteor.subscribe('pointsSubscription');
 });
