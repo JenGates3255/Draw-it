@@ -9,9 +9,12 @@ var currentWord = ''
 var changeWord = function() {
   Meteor.call('getWord', function(err, word) {
     currentWord = word
+    $('.word').text(currentWord)
     console.log(currentWord)
   })  
 }
+
+
 // When turn changes call the above function with changeWord()
 
 // Use session.set to make something reactive
@@ -81,4 +84,13 @@ var countDown = function(){
   
 }
 
+// When document loads
+$(document).on('ready', function() {
+
+  $('.newWord').on('click', function(){
+    console.log('click')
+    changeWord()
+  })
+  
+});
 
