@@ -162,13 +162,13 @@ Hence we need to create 2 animations. One with 10 steps and 10 digits and
 the other one with 6 steps and 6 digits*/
 @keyframes moveten {
 	0% {top: 0;}
-	100% {top: -400px;} 
+	100% {top: -200px;} 
 	/*height = 40. digits = 10. hence -400 to move it completely to the top*/
 }
 
 @keyframes movesix {
 	0% {top: 0;}
-	100% {top: -240px;} 
+	100% {top: -120px;} 
 	/*height = 40. digits = 6. hence -240 to move it completely to the top*/
 }
 
