@@ -1,5 +1,6 @@
 html, body {
 	height: 100%;
+	background-image: url("https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-xfa1/t1.0-9/310311_2691156399904_481909107_n.jpg");
 }
 
 .container{
@@ -18,31 +19,25 @@ font-size: 30px;
 
 .word-container, .timer{
 	height: 100%;
-	border: 2px solid black;
+	border: 4px solid black;
 	/*background-color: blue;*/
 }
 .row2 {
 	height: 25%;
+	background-color: white;
 }
 
 .canvas, #my-canvas{
 	height: 100%;
-	border: 2px solid black;
+	border: 4px solid black;
 	float: left;
+	background-color: white;
 }
-#my-canvas{
-	padding:0;
-/*	position: relative;
-*/}
 
 .main{
- height: 440px;
+ height: 445px;
 }
 
-.input-bar {
-	height: 15%;
-	border: 2px solid black;
-}
 .clearButton{
 	display: inline;
 	float: right;
