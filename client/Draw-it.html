@@ -5,6 +5,9 @@
   <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
   <link rel="stylesheet" type="text/css" href="draw-it.css">
   <!-- // <script type='text/javascript' src='sketch.js'></script> -->
+      <link href='http://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+  <script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>    
+
 
 </head>
 
@@ -19,34 +22,73 @@
     </div>
   </div>
 	<div class="row row2">
-		<div class="word-container col-sm-5">
-    <h3 class="word">
+		<div class="word-container col-sm-9">
+    <h1 class="word">
       Your word
-    </h3>
-			
-		</div>
-		<div class="timer col-sm-7">
-			countDown
-		</div>
-	</div>
+    </h1>
+       <input class='newWord btn btn-danger btn-lg' type='button' value='New Game'/> 
+    </div>
 
-	<div class="row main">
-    	<div class='HUD col-sm-3'>
-
-       <input class='newWord btn btn-danger btn-lg btn-block' type='button' value='New Game'/> 
-  	 	</div>
-
-    	<div id='my-canvas' class='canvas col-sm-9'>
-        {{> drawingSurface}}
-         <input class='clearButton1 btn btn-primary btn-md' type='button' value='Clear'/>
-    	</div>
+    <div class="timer col-sm-3">
+  
+      <!-- We will replicate the digits now -->
+<div class="containerTimer">
+  <!-- time to add the controls -->
+  <input id="start" name="controls" type="radio" />
+  <input id="stop" name="controls" type="radio" />
+  <input id="reset" name="controls" type="radio" />
+  <div class="timer">
+    <div class="cell">
+      <div class="numbers tenhour moveten">0 1 2 3 4 5 6 7 8 9</div>
+    </div>
+    <div class="cell">
+      <div class="numbers hour moveten">0 1 2 3 4 5 6 7 8 9</div>
+    </div>
+    <div class="cell divider"><div class="numbers">:</div></div>
+    <div class="cell">
+      <div class="numbers tenminute movesix">0 1 2 3 4 5 6</div>
+    </div>
+    <div class="cell">
+      <div class="numbers minute moveten">0 1 2 3 4 5 6 7 8 9</div>
+    </div>
+    <div class="cell divider"><div class="numbers">:</div></div>
+    <div class="cell">
+      <div class="numbers tensecond movesix">0 1 2 3 4 5 6</div>
+    </div>
+    <div class="cell">
+      <div class="numbers second moveten">0 1 2 3 4 5 6 7 8 9</div>
+    </div>
+    <div class="cell divider"><div class="numbers">:</div></div>
+    <div class="cell">
+      <div class="numbers milisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+    </div>
+    <div class="cell">
+      <div class="numbers tenmilisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+    </div>
+    <div class="cell">
+      <div class="numbers hundredmilisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+    </div>
   </div>
-  <div class='input-bar row'>
-  	<div class="col-sm-12">
-  		input-bar
-  	</div>
+  <!-- Lables for the controls -->
+  <div id="timer_controls">
+    <label for="start">Start</label>
+    <label for="stop">Stop</label>
+    <label for="reset">Reset</label>
   </div>
 </div>
+
+<!-- Lets load up prefixfree first -->
+
+    </div>
+  </div>
+
+  <div class="row main">
+      <div id='my-canvas' class='canvas col-sm-12'>
+        {{> drawingSurface}}
+      </div>
+  </div>
+</div>
+
 
 
 
@@ -60,6 +102,7 @@
 <template name="drawingSurface">
   <h2>Loading...</h2>
   {{> canvas}}
+         <input class='clearButton btn btn-primary btn-lg btn-block' type='button' value='Clear'/>
   
  
 </template>

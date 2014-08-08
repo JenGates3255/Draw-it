@@ -50,6 +50,7 @@ Template.drawingSurface.title = function () {
 
 Template.drawingSurface.events({
   'click input': function (event) {
+    console.log('hello')
     Meteor.call('clear', function() {
       canvas.clear();
     });
